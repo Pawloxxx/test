@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>malarz</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <section id="left">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mieszamy.html">Mieszamy</a></li>
+            <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Zapotrzebowanie na farbę</h2>
+        <label for="area">Powierzchnia malowania (m<sup>2</sup>):</label>
+        <input type="number" id="area">
+        <button onclick="policz()">Policz</button>
+        <p id="result"></p>
+    </section>
+    <script>
+        function policz(){
+            let area = document.getElementById("area").value;
+            let amount = Math.ceil(area/4);
+            let result = document.getElementById("result");
+            result.innerHTML = "Liczba potrzebnych puszek: " + amount
+        }
+    </script>
+    <section id="right">
+        <img src="obraz.png" alt="Próbki farb">
+    </section>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował: Surmiak Paweł</p>
+    </footer>
+</body>
+</html>
